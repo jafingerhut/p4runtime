@@ -54,3 +54,11 @@ for filename in docs/v1/resources/fonts/Utopia/*.ttf
 do
     reuse annotate -c "${COPYRIGHT_HOLDER}" -l "LicenseRef-Utopia-font-license" -y "${YEAR1},${YEAR2}" --fallback-dot-license "${filename}"
 done
+
+COPYRIGHT_HOLDER="Adobe Systems Incorporated"
+YEAR="2002"
+
+for filename in docs/tools/fonts/*.otf
+do
+    reuse annotate -c "${COPYRIGHT_HOLDER}" -l "OFL-1.1" -y "${YEAR}" --fallback-dot-license "${filename}"
+done
